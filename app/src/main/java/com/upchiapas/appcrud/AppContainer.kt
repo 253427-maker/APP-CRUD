@@ -3,6 +3,7 @@ package com.upchiapas.appcrud
 import android.content.Context
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.upchiapas.appcrud.core.network.AuthInterceptor
+import com.upchiapas.appcrud.core.network.HostFallbackInterceptor
 import com.upchiapas.appcrud.features.auth.data.AuthApiService
 import com.upchiapas.appcrud.features.auth.data.AuthRepositoryImpl
 import com.upchiapas.appcrud.features.auth.data.SessionStorageImpl
@@ -45,7 +46,12 @@ class AppContainer(context: Context) {
 
     private val authInterceptor = AuthInterceptor(sessionStorage)
 
+    private val hostFallbackInterceptor = HostFallbackInterceptor()
+
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
+        .connectTimeout(5, java.util.concurrent.TimeUnit.SECONDS)
+        .readTimeout(10, java.util.concurrent.TimeUnit.SECONDS)
+        .addInterceptor(hostFallbackInterceptor) // reintenta con 127.0.0.1 si 10.0.2.2 falla
         .addInterceptor(authInterceptor)        // primero auth, luego logging
         .addInterceptor(loggingInterceptor)
         .build()
