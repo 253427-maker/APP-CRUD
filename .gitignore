@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Backend
+backend/node_modules/
+backend/.db.json
+
+# PDFs (no queremos subir archivos grandes de clase al repo)
+*.pdf
