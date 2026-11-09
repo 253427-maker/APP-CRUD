@@ -1,0 +1,4 @@
+<resources>
+    <!-- Tema base requerido por el Manifest; Compose usa su propio theming -->
+    <style name="Theme.AppCRUD" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
