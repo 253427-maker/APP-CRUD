@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Backend json-server para App CRUD - Control de Cultivos",
   "scripts": {
-    "start": "json-server-auth db.json --routes routes.json --port 3000"
+    "start": "json-server-auth db.json --routes routes.json --port 3000 --host 0.0.0.0"
   },
   "dependencies": {
     "json-server": "0.17.4",

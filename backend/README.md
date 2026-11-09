@@ -20,7 +20,7 @@ cd AppCRUD\backend
 npm start
 ```
 
-El servidor queda disponible en **http://localhost:3000**
+El servidor queda disponible en **http://localhost:3000** escuchando en `0.0.0.0:3000` (IPv4) para que el emulador Android (`10.0.2.2`) pueda conectarse sin problemas.
 
 ## Endpoints disponibles
 
