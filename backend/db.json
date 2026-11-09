@@ -4,7 +4,13 @@
       "id": 1,
       "name": "Karen Pérez",
       "email": "karen@upchiapas.edu.mx",
-      "password": "12345678"
+      "password": "$2a$10$f8YQrusvLloWgszJrG2NmunGhz7xL7DOWLt9AfXXoO6iz0A/Me7.e"
+    },
+    {
+      "email": "karen.test@upchiapas.edu.mx",
+      "password": "$2a$10$f8YQrusvLloWgszJrG2NmunGhz7xL7DOWLt9AfXXoO6iz0A/Me7.e",
+      "name": "Karen Perez",
+      "id": 2
     }
   ],
   "parcelas": [
@@ -44,7 +50,7 @@
       "id": 5,
       "nombre": "El Porvenir",
       "cultivo": "Café",
-      "hectareas": 7.0,
+      "hectareas": 7,
       "fechaSiembra": "2026-01-05",
       "riegoActivo": true
     }
